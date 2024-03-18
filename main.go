@@ -14,10 +14,10 @@ func main() {
 
 	err := cmd.Run()
 	if err != nil {
-		fmt.Printf("Command execution error: %s\n", err)
+		fmt.Println("Command execution error: %s\n", err)
 		fmt.Printf("Error output: %s\n", stderr.String())
 		return
 	}
-
+	fmt.Println("Success", stdout.String())
 	fmt.Printf("Output: %s\n", stdout.String())
 }
